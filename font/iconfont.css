@@ -1,0 +1,35 @@
+
+@font-face {font-family: "leave";
+  src: url('iconfont.eot?t=1495364731877'); /* IE9*/
+  src: url('iconfont.eot?t=1495364731877#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1495364731877') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1495364731877') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1495364731877#leave') format('svg'); /* iOS 4.1- */
+}
+
+.leave {
+  font-family:"leave" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.leave-schedule:before { content: "\e644"; }
+
+.leave-search:before { content: "\e619"; }
+
+.leave-month-list:before { content: "\e622"; }
+
+.leave-day-list:before { content: "\e62a"; }
+
+.leave-approval-list:before { content: "\e66b"; }
+
+.leave-approval:before { content: "\e686"; }
+
+.leave-sign:before { content: "\e6b5"; }
+
+.leave-vacation:before { content: "\e6c6"; }
+
+.leave-sign-list:before { content: "\e6c5"; }
+

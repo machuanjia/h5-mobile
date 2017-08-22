@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>签卡</title>
+    <link rel="stylesheet" href="css/leave.mobile.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+<button style="padding: 20px" id="a">签卡</button>
+<button style="padding: 20px" id="b">外勤签卡</button>
+<div class="leave-mobile-wrap iphone5">
+
+    <div class="leave-sign-wrap flex flex-col">
+        <div class="flex-grow-1 leave-sign-map">
+        </div>
+        <div class="leave-sign-content">
+            <div class="leave-sign-address">北京市朝阳区红军营南路瑞普大厦B座1201室</div>
+            <div class="leave-sign-desc">距离打卡地点1000米</div>
+
+            <div class="leave-sign-form-ctrl" id="bb">
+                <textarea class="leave-sign-textarea" placeholder="备注必填"></textarea>
+            </div>
+            <div class="leave-sign-action" id="bbb">
+                <button class="leave-sign-action-btn">外勤签卡</button>
+            </div>
+            <div class="leave-sign-action" id="aaa">
+                <button class="leave-sign-action-btn">签卡</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/zepto.js"></script>
+<script>
+    Zepto(function($){
+        $('#bb,#bbb').hide();
+        $('#a').click(function(){
+            $('#bb,#bbb').hide();
+            $('#aaa').show();
+        });
+        $('#b').click(function(){
+            $('#bb,#bbb').show();
+            $('#aaa').hide();
+        });
+    });
+</script>
+</body>
+</html>
