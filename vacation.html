@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>假期额度</title>
-    <link rel="stylesheet" href="css/leave.mobile.css">
-    <link rel="stylesheet" href="font/iconfont.css">
-    <link rel="stylesheet" href="css/mobilebone.animate.css">
-    <link rel="stylesheet" href="css/mobilebone.css">
 </head>
 <body>
-<div class="leave-mobile-wrap iphone5">
-    <div id="pageHome" class="page out">
+    <div id="pageHome" class="page out" data-onpagefirstinto="vacationInit" data-callback="vacationCallBack" data-fallback="vacationFallback">
         <div id="leave-list-wrap" class="leave-list-wrap flex-col">
             <div class="leave-list-header flex-row">
                 <div class="leave-header-left flex-se1">
@@ -19,167 +14,45 @@
                     <div class="leave-header-date">2017-05</div>
                 </div>
                 <div class="leave-header-right">
-                    <a href="#&leave-search-wrap" data-reload class="leave-search-action"><i class="leave leave-search leave-search-action-icon"></i></a>
+                    <a href="search.html" data-reload class="leave-search-action"><i class="leave leave-search leave-search-action-icon"></i></a>
                 </div>
             </div>
-            <div id="leave-list-body" class="leave-list-body flex-se1">
-
-                <div class="leave-list-body-content">
-
-                    <a href="#&leave-detail-year" class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date">
-                                <span class="leave-item-left-week">年假</span>
-                                <span class="leave-item-left-date">2017</span>
-                            </div>
-                        </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">总数:10天  余额:2天</span>
-                            </div>
-                            <div class="leave-item-center-desc">
-                                2017.3.10 - 2017.12.30
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#&leave-detail-balance" class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date">
-                                <span class="leave-item-left-week">调休</span>
-                                <span class="leave-item-left-date"></span>
-                            </div>
-                        </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">余额 48h</span>
-                            </div>
-                            <div class="leave-item-center-desc">
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div id="leave-search-wrap" class="page out">
-        <div class="leave-search-wrap flex-col">
-            <div class="leave-search-header">
-                <i class="leave leave-search"></i>
-                <input class="leave-search-input"/>
-            </div>
-            <div class="leave-search-body flex-se1">
-                <div class="leave-search-item">
-                    韩冬佑
+            <div class="leave-list-body flex-se1 leave-list-body-scroll">
+                <div class="leave-list-body-content" >
+                    <!--<div class="leave-list-item flex-row">-->
+                        <!--<div class="leave-item-left">-->
+                            <!--<div class="leave-item-left-week-date">-->
+                                <!--<span class="leave-item-left-week">年假</span>-->
+                                <!--<span class="leave-item-left-date">2017</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="leave-item-center flex-se1">-->
+                            <!--<div class="leave-item-center-title">-->
+                                <!--<span class="start">总数:10天  余额:2天</span>-->
+                            <!--</div>-->
+                            <!--<div class="leave-item-center-desc">-->
+                                <!--2017.3.10 - 2017.12.30-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="leave-list-item flex-row">-->
+                        <!--<div class="leave-item-left">-->
+                            <!--<div class="leave-item-left-week-date">-->
+                                <!--<span class="leave-item-left-week">调休</span>-->
+                                <!--<span class="leave-item-left-date"></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="leave-item-center flex-se1">-->
+                            <!--<div class="leave-item-center-title">-->
+                                <!--<span class="start">余额 48h</span>-->
+                            <!--</div>-->
+                            <!--<div class="leave-item-center-desc">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
             </div>
         </div>
     </div>
-    <div id="leave-detail-year" class="page out">
-
-        <div class="leave-list-wrap flex-col">
-            <div class="leave-list-body flex-se1">
-                <div class="leave-list-body-content">
-                    <div class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date">
-                                <span class="leave-item-left-week">2017</span>
-                            </div>
-                        </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">总数:10天  余额:2天</span>
-                            </div>
-                            <div class="leave-item-center-desc">
-                                2017.3.10 - 2017.12.30
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date">
-                                <span class="leave-item-left-week">2016</span>
-                            </div>
-                        </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">总数:10天  余额:2天</span>
-                            </div>
-                            <div class="leave-item-center-desc">
-                                2016.3.10 - 2016.12.30
-                            </div>
-                        </div>
-                    </div>
-                    <div class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date">
-                                <span class="leave-item-left-week">2015</span>
-                            </div>
-                        </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">总数:10天  余额:2天</span>
-                            </div>
-                            <div class="leave-item-center-desc">
-                                2015.3.10 - 2015.12.30
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-    <div id="leave-detail-balance" class="page out">
-        <div class="leave-list-wrap flex-col">
-            <div class="leave-list-body flex-se1">
-                <div class="leave-list-body-content">
-                    <div class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date leave-item-left-week-date-65">
-                                <span class="leave-item-left-week">2017-05</span>
-                            </div>
-                        </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">总数:10小时  余额:2小时</span>
-                            </div>
-                            <div class="leave-item-center-desc">
-                                2017.5.10 - 2017.5.30
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date leave-item-left-week-date-65">
-                                <span class="leave-item-left-week">2017-04</span>
-                            </div>
-                        </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">总数:10小时  余额:2小时</span>
-                            </div>
-                            <div class="leave-item-center-desc">
-                                2017.4.10 - 2017.4.30
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</div>
-<script src="js/zepto.js"></script>
-<script src="js/mobilebone.js"></script>
-
 </body>
 </html>

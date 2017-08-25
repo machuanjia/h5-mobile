@@ -5,16 +5,16 @@
     <title>人员查询</title>
 </head>
 <body>
-<div class="page out" data-callback="searchCallBack">
+<div class="page out" data-onpagefirstinto="searchInit" data-callback="searchCallBack" data-fallback="searchFallback">
     <div class="leave-search-wrap flex-col">
         <div class="leave-search-header">
             <i class="leave leave-search"></i>
-            <input class="leave-search-input"/>
+            <input class="leave-search-input" id="leave-search-input"/>
         </div>
-        <div class="leave-search-body flex-se1">
-            <div class="leave-search-item">
-                韩冬佑
-            </div>
+        <div id="leave-search-body" class="leave-search-body flex-se1">
+            <!--<div pid="1111" class="leave-search-item" href="">-->
+                <!--韩冬佑-->
+            <!--</div>-->
         </div>
     </div>
 </div>

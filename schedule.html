@@ -1,230 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>考勤排班</title>
-    <link rel="stylesheet" href="css/leave.mobile.css">
-    <link rel="stylesheet" href="font/iconfont.css">
-    <link rel="stylesheet" href="css/mobilebone.animate.css">
-    <link rel="stylesheet" href="css/mobilebone.css">
 </head>
 <body>
-<div class="leave-mobile-wrap iphone5">
-    <div id="pageHome" class="page out">
-        <div id="leave-list-wrap" class="leave-list-wrap flex-col">
+    <div id="pageHome" class="page out" data-onpagefirstinto="scheduleInit" data-callback="scheduleCallBack" data-fallback="scheduleFallback">
+        <div class="leave-list-wrap flex-col">
             <div class="leave-list-header flex-row">
                 <div class="leave-header-left flex-se1">
                     <div class="leave-header-name">韩冬佑</div>
                     <div class="leave-header-date">2017-05</div>
                 </div>
                 <div class="leave-header-right">
-                    <a href="#&leave-search-wrap" data-reload class="leave-search-action"><i class="leave leave-search leave-search-action-icon"></i></a>
+                    <a href="search.html" data-reload class="leave-search-action"><i class="leave leave-search leave-search-action-icon"></i></a>
                 </div>
             </div>
-            <div id="leave-list-body" class="leave-list-body flex-se1">
+            <div class="leave-list-body flex-se1">
 
-                <div class="leave-list-body-content">
-
-                    <a href="#&leave-detail-wrap" class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date">
-                                <span class="leave-item-left-week">周一</span>
-                                <span class="leave-item-left-date">05-01</span>
-                            </div>
+                <div id="wrapper">
+                    <div>
+                        <div class="leave-list-loading-top">
+                            <div class="loading"></div>
                         </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">早班（班次名称）</span>
-                            </div>
-                            <div class="leave-item-center-desc">
+                        <div class="leave-list-body-content">
 
-                            </div>
+                            <a href="schedule_detail.html" class="leave-list-item flex-row">
+                                <div class="leave-item-left">
+                                    <div class="leave-item-left-week-date">
+                                        <span class="leave-item-left-week">周一</span>
+                                        <span class="leave-item-left-date">05-01</span>
+                                    </div>
+                                </div>
+                                <div class="leave-item-center flex-se1">
+                                    <div class="leave-item-center-title">
+                                        <span class="start">早班（班次名称）</span>
+                                    </div>
+                                    <div class="leave-item-center-desc">
+
+                                    </div>
+                                </div>
+                            </a>
+                            <!--<a href="schedule_detail.html" class="leave-list-item flex-row">-->
+                                <!--<div class="leave-item-left">-->
+                                    <!--<div class="leave-item-left-week-date leave-item-left-bg leave-item-left-vacation">-->
+                                        <!--<span class="leave-item-left-week">周二</span>-->
+                                        <!--<span class="leave-item-left-date">05-02</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="leave-item-center flex-se1">-->
+                                    <!--<div class="leave-item-center-title">-->
+                                        <!--<span class="start">劳动节</span>-->
+                                    <!--</div>-->
+                                    <!--<div class="leave-item-center-desc">-->
+
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="schedule_detail.html" class="leave-list-item flex-row">-->
+                                <!--<div class="leave-item-left">-->
+                                    <!--<div class="leave-item-left-week-date leave-item-left-bg leave-item-left-business">-->
+                                        <!--<span class="leave-item-left-week">周六</span>-->
+                                        <!--<span class="leave-item-left-date">05-06</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="leave-item-center flex-se1">-->
+                                    <!--<div class="leave-item-center-title">-->
+                                        <!--<span class="start">16:00</span>-->
+                                        <!--<span class="to">-</span>-->
+                                        <!--<span class="end">18:00</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
                         </div>
-                    </a>
-
-
-                    <a href="#&leave-detail-wrap" class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date leave-item-left-bg leave-item-left-vacation">
-                                <span class="leave-item-left-week">周二</span>
-                                <span class="leave-item-left-date">05-02</span>
-                            </div>
+                        <div class="leave-list-loading-bottom">
+                            <div class="loading"></div>
                         </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">劳动节</span>
-                            </div>
-                            <div class="leave-item-center-desc">
-
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#&leave-detail-wrap" class="leave-list-item flex-row">
-                        <div class="leave-item-left">
-                            <div class="leave-item-left-week-date leave-item-left-bg leave-item-left-business">
-                                <span class="leave-item-left-week">周六</span>
-                                <span class="leave-item-left-date">05-06</span>
-                            </div>
-                        </div>
-                        <div class="leave-item-center flex-se1">
-                            <div class="leave-item-center-title">
-                                <span class="start">16:00</span>
-                                <span class="to">-</span>
-                                <span class="end">18:00</span>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div id="leave-search-wrap" class="page out">
-        <div class="leave-search-wrap flex-col">
-            <div class="leave-search-header">
-                <i class="leave leave-search"></i>
-                <input class="leave-search-input"/>
-            </div>
-            <div class="leave-search-body flex-se1">
-                <div class="leave-search-item">
-                    韩冬佑
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="leave-detail-wrap" class="page out">
-        <div class="leave-detail-wrap flex-col">
-            <div class="leave-detail-body flex-se1">
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        日期：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        2017年5月2号
-                    </div>
-                </div>
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        班次：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        端午节|休息|正常版
-                    </div>
-                </div>
-
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        签到时间：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        2017.5.2 10:10
-                    </div>
-                </div>
-
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        签退时间：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        2017.5.2 10:10
-                    </div>
-                </div>
-
-
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        出勤：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        0
-                    </div>
-                </div>
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        状态：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        正常
-                    </div>
-                </div>
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        迟到：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        -
-                    </div>
-                </div>
-
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        早退：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        -
-                    </div>
-                </div>
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        旷工：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        -
-                    </div>
-                </div>
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        补签卡：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        -
-                    </div>
-                </div>
-
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        事假：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        -
-                    </div>
-                </div>
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        加班：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        -
-                    </div>
-                </div>
-
-                <div class="leave-detail-item flex flex-row">
-                    <div class="leave-detail-item-left">
-                        公出：
-                    </div>
-                    <div class="leave-detail-item-right">
-                        -
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
 </div>
-<script src="js/zepto.js"></script>
-<script src="js/mobilebone.js"></script>
 </body>
 </html>

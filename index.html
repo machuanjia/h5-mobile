@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/mobilebone.css">
     <link rel="stylesheet" href="css/leave.mobile.css">
     <link rel="stylesheet" href="font/iconfont.css">
+    <script>
+        var personCode = personCode;
+    </script>
     <script src="js/moment.js"></script>
     <script src="js/zepto.js"></script>
     <script src="js/iscroll.js"></script>
@@ -16,19 +19,19 @@
 <body>
     <div id="pageHome" class="page leave-module">
         <div class="flex-row">
-            <a href="day.html" class="flex-se1 leave-module-item">
+            <a href="day.html" data-reload class="flex-se1 leave-module-item">
                     <span class="leave-module-icon bg2">
                         <i class="leave leave-day-list"></i>
                     </span>
                 <span class="leave-module-name">考勤日报</span>
             </a>
-            <a href="month.html" class="flex-se1 leave-module-item">
+            <a href="month.html" data-reload class="flex-se1 leave-module-item">
                     <span class="leave-module-icon bg3">
                         <i class="leave leave-month-list"></i>
                     </span>
                 <span class="leave-module-name">考勤月报</span>
             </a>
-            <a href="schedule.html" class="flex-se1 leave-module-item">
+            <a href="schedule.html" data-reload class="flex-se1 leave-module-item">
                     <span class="leave-module-icon bg4">
                         <i class="leave leave-schedule"></i>
                     </span>
@@ -37,19 +40,19 @@
         </div>
         <div class="flex-row">
 
-            <a href="vacation.html" class="flex-se1 leave-module-item">
+            <a href="vacation.html" data-reload class="flex-se1 leave-module-item">
                     <span class="leave-module-icon bg5">
                         <i class="leave leave-vacation"></i>
                     </span>
                 <span class="leave-module-name">假期额度</span>
             </a>
-            <a href="sign.list.html" class="flex-se1 leave-module-item">
+            <a href="sign_list.html" data-reload class="flex-se1 leave-module-item">
                     <span class="leave-module-icon bg6">
                         <i class="leave leave-sign-list"></i>
                     </span>
                 <span class="leave-module-name">签卡记录</span>
             </a>
-            <a href="form.list.html" class="flex-se1 leave-module-item">
+            <a href="form.html" data-reload class="flex-se1 leave-module-item">
                     <span class="leave-module-icon bg7">
                         <i class="leave leave-approval-list"></i>
                     </span>
@@ -57,7 +60,7 @@
             </a>
         </div>
         <div class="flex-row">
-            <a href="approval.html" class="flex-se1 leave-module-item">
+            <a href="approval.html" data-reload class="flex-se1 leave-module-item">
                     <span class="leave-module-icon bg8">
                         <i class="leave leave-approval"></i>
                     </span>

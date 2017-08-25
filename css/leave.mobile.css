@@ -162,6 +162,9 @@ html, body {
     overflow-x: hidden;
     position: relative;
 }
+.leave-list-body-scroll{
+    overflow-y: auto;
+}
 .leave-list-loading-top{
     border-bottom: 1px #dddddd solid;
 }
@@ -240,9 +243,11 @@ html, body {
 }
 .leave-item-center{
     padding: 5px;
+    text-decoration: none;
 }
 .leave-item-center-title{
     margin-bottom: 8px;
+    text-decoration: none;
 }
 .leave-item-center-title .start{
     display: inline-block;
@@ -250,6 +255,7 @@ html, body {
     font-size: 16px;
     line-height: 16px;
     vertical-align: middle;
+    text-decoration: none;
 
 }
 .leave-item-center-title .to{
@@ -258,6 +264,7 @@ html, body {
     font-size: 16px;
     line-height: 16px;
     vertical-align: middle;
+    text-decoration: none;
 }
 .leave-item-center-title .end{
     display: inline-block;
@@ -265,6 +272,7 @@ html, body {
     font-size: 16px;
     line-height: 16px;
     vertical-align: middle;
+    text-decoration: none;
 }
 
 .leave-item-center-desc{
@@ -272,6 +280,15 @@ html, body {
     font-size: 14px;
     line-height: 16px;
     vertical-align: middle;
+    text-decoration: none;
+}
+.leave-item-center-address{
+    color: #777777;
+    font-size: 14px;
+    line-height: 16px;
+    vertical-align: middle;
+    margin-top: 5px;
+    text-decoration: none;
 }
 .leave-item-center-desc-text{
     color: #999;
@@ -282,10 +299,16 @@ html, body {
     overflow: hidden;
     text-overflow: ellipsis;
     padding-right: 10px;
+    text-decoration: none;
 }
 .leave-item-center-desc-stat{
     padding: 5px 0;
     font-size: 12px;
+    text-decoration: none;
+}
+
+.leave-item-center-item{
+    margin-bottom: 10px;
 }
 
 
@@ -348,6 +371,7 @@ html, body {
     border-bottom: 1px #dddddd solid;
     font-size: 16px;
     color: #555;
+    cursor: pointer;
 }
 .leave-search-body{
     overflow-x: hidden;
@@ -637,4 +661,36 @@ html, body {
     width: 100%;
     background: #fff;
     overflow: hidden;
+}
+
+.empty{
+    text-align: left;
+    color: #777777;
+    font-size: 14px;
+    padding: 30px;
+}
+
+.leave-item-checkbox{
+    /*-ms-transform: scale(1.5); !* IE *!*/
+    /*-moz-transform: scale(1.5); !* FireFox *!*/
+    /*-webkit-transform: scale(1.5); !* Safari and Chrome *!*/
+    /*-o-transform: scale(1.5); !* Opera *!*/
+}
+
+.leave-item-checkbox-all{
+    margin-left: 18px;
+}
+
+.btn-banch{
+    margin-left: 10px;
+    border: 0;
+    border-radius: 3px;
+    background: #70d6d6;
+    color: #fff;
+    outline: none;
+    padding: 3px 10px;
+}
+
+.hide{
+    display: none;
 }
