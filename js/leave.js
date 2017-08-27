@@ -407,7 +407,7 @@ FUN = {
                             FUN.month.monthScroll.refresh();
                         }
                     }else{
-                        $(FUN.schedule.pageInto).find('.leave-list-body-content').append('<div class="empty">数据获取错误，请检查网络或刷新重试!</div>');
+                        $(FUN.month.pageInto).find('.leave-list-body-content').append('<div class="empty">数据获取错误，请检查网络或刷新重试!</div>');
                     }
 
                 },
@@ -560,7 +560,7 @@ FUN = {
     },
     scheduleCallBack: function (pageInto, pageOut, response) {
         console.log('scheduleCallBack');
-        FUN.month.pageInto = pageInto;
+        FUN.schedule.pageInto = pageInto;
         if(FUN.currentStep === 'search'){
             FUN.currentStep = '';
         }else{
@@ -675,7 +675,7 @@ FUN = {
                         }
                         _p.find('.leave-list-body-content').append(html);
                     }else{
-                        $(FUN.schedule.pageInto).find('.leave-list-body-content').append('<div class="empty">数据获取错误，请检查网络或刷新重试!</div>');
+                        $(FUN.vacation.pageInto).find('.leave-list-body-content').append('<div class="empty">数据获取错误，请检查网络或刷新重试!</div>');
                     }
                 },
                 error: function (xhr, type) {
@@ -690,16 +690,16 @@ FUN = {
     },
     vacationCallBack: function (pageInto, pageOut, response) {
         console.log('vacationCallBack');
-        FUN.month.pageInto = pageInto;
+        FUN.vacation.pageInto = pageInto;
         if(FUN.currentStep === 'search'){
             FUN.currentStep = '';
         }else{
-            FUN.schedule.getData();
+            FUN.vacation.getData();
         }
     },
     vacationFallback:function(pageInto, pageOut, response){
         console.log('vacationFallback');
-        FUN.schedule.param = {
+        FUN.vacation.param = {
             start:moment().startOf('month'),
             searchPersonId:''
         };
@@ -813,7 +813,7 @@ FUN = {
                         }
 
                         //下拽在最上面插入
-                        if(FUN.day.param.start > moment().startOf('week')){
+                        if(FUN.sign.param.start > moment().startOf('week')){
                             _p.find('.leave-list-body-content').prepend(html);
                         }else {
                             //上拽在最下面插入
@@ -823,7 +823,7 @@ FUN = {
                             FUN.sign.signScroll.refresh();
                         }
                     }else{
-                        $(FUN.schedule.pageInto).find('.leave-list-body-content').append('<div class="empty">数据获取错误，请检查网络或刷新重试!</div>');
+                        $(FUN.sign.pageInto).find('.leave-list-body-content').append('<div class="empty">数据获取错误，请检查网络或刷新重试!</div>');
                     }
 
                 },
@@ -935,7 +935,7 @@ FUN = {
                             FUN.form.formScroll.refresh();
                         }
                     }else{
-                        $(FUN.schedule.pageInto).find('.leave-list-body-content').append('<div class="empty">数据获取错误，请检查网络或刷新重试!</div>');
+                        $(FUN.form.pageInto).find('.leave-list-body-content').append('<div class="empty">数据获取错误，请检查网络或刷新重试!</div>');
                     }
 
                 },
@@ -979,6 +979,8 @@ FUN = {
                             $(pageInto).find('.address').text(_data.address);
                             $(pageInto).find('.time').text(_data.time);
                             $(pageInto).find('.text').text(_data.text);
+                            $(pageInto).find('.flowsState').text(_data.flowsState);
+
                     }else{
                         $(pageInto).find('.leave-detail-body').append('<div class="empty">数据获取错误，请检查网络或刷新重试!</div>');
                     }
@@ -995,7 +997,7 @@ FUN = {
         FUN.form.formScroll = setScroll(pageInto,'form');
     },
     formCallBack: function (pageInto, pageOut, response) {
-        FUN.sign.pageInto = pageInto;
+        FUN.form.pageInto = pageInto;
         if(FUN.currentStep === 'search'){
             FUN.currentStep = '';
         }else{
