@@ -708,3 +708,23 @@ html, body {
     text-align: center;
     font-size: 12px;
 }
+.leave-list-body-content-split-line{
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+}
+.leave-list-body-content-split-line span{
+    display: inline-block;
+    background: #fff;
+    padding: 0 10px;
+    color: #aaa;
+    font-size: 12px;
+
+}
+.leave-list-body-content-split-line hr{
+    border-top:0;
+    border-color: #f3f3f3;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -10px;
+}

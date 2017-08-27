@@ -382,8 +382,13 @@ FUN = {
                     if(data && data.personId){
                         FUN.month.param.searchPersonId = data.personId;
                         var _p = $(FUN.month.pageInto);
-                        _p.find('.leave-header-name').text(FUN.month.param.start.format('YYYY-MM'));
+                        //FUN.month.param.start.format('YYYY-MM')
+                        _p.find('.leave-header-name').text(data.personName);
                         var html = "";
+                        html+='<div class="leave-list-body-content-split-line">';
+                            html+='<span>'+FUN.month.param.start.format('YYYY-MM')+'</span>';
+                            html+='<hr>';
+                        html+='</div>';
                         for(var i = 0; i < data.data.length; i++) {
                             var _temp = data.data[i];
                             html+='<div class="leave-detail-item flex flex-row">';
