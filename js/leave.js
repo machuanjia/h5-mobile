@@ -310,6 +310,7 @@ FUN = {
         }else{
             FUN.day.getData();
         }
+        FUN.msg('获取数据失败!');
     },
     dayFallback:function(pageInto, pageOut, response){
         FUN.day.param = {
@@ -1409,6 +1410,12 @@ FUN = {
         //     FUN[FUN.currentType].param.searchPersonId = '';
         // }
     },
+    msg:function (text) {
+        $('body').append('<div class="message-box">'+text+'</div>');
+        setTimeout(function(){
+            $('.message-box').remove();
+        },1500);
+    }
 
 
 };

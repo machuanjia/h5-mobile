@@ -694,3 +694,17 @@ html, body {
 .hide{
     display: none;
 }
+.message-box{
+    position: absolute;
+    top:0;
+    left:0;
+    background: rgba(112,214,214,0.9);
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
